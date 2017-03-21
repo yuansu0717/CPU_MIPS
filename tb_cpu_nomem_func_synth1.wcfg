@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_MIPS_time_impl.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_MIPS" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="307128000fs"></ZoomStartTime>
+      <ZoomEndTime time="1233128001fs"></ZoomEndTime>
+      <Cursor1Time time="511128000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="19" />
+   <wvobject fp_name="/tb_MIPS/tb_CPU/design_1_i/fre_div_0/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS/tb_CPU/design_1_i/CPU_0/instr" type="array">
+      <obj_property name="ElementShortName">instr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS/tb_CPU/design_1_i/counter_timer_0/control_reg" type="array">
+      <obj_property name="ElementShortName">control_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">control_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS/tb_CPU/design_1_i/counter_timer_0/full_tag_counter" type="logic">
+      <obj_property name="ElementShortName">full_tag_counter</obj_property>
+      <obj_property name="ObjectShortName">full_tag_counter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS/tb_CPU/design_1_i/counter_timer_0/zero_tag_timer" type="logic">
+      <obj_property name="ElementShortName">zero_tag_timer</obj_property>
+      <obj_property name="ObjectShortName">zero_tag_timer</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS/tb_CPU/design_1_i/DM/we" type="logic">
+      <obj_property name="ElementShortName">we</obj_property>
+      <obj_property name="ObjectShortName">we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS/tb_CPU/design_1_i/CPU_0/inst/U3_RF/i_write_enable" type="logic">
+      <obj_property name="ElementShortName">i_write_enable</obj_property>
+      <obj_property name="ObjectShortName">i_write_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS/tb_CPU/design_1_i/CPU_0/inst/U3_RF/i_rs_num" type="array">
+      <obj_property name="ElementShortName">i_rs_num[4:0]</obj_property>
+      <obj_property name="ObjectShortName">i_rs_num[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS/tb_CPU/design_1_i/CPU_0/inst/U3_RF/i_rt_num" type="array">
+      <obj_property name="ElementShortName">i_rt_num[4:0]</obj_property>
+      <obj_property name="ObjectShortName">i_rt_num[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS/tb_CPU/design_1_i/CPU_0/inst/U3_RF/i_wr_num" type="array">
+      <obj_property name="ElementShortName">i_wr_num[4:0]</obj_property>
+      <obj_property name="ObjectShortName">i_wr_num[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS/tb_CPU/design_1_i/CPU_0/inst/U3_RF/i_data_rf" type="array">
+      <obj_property name="ElementShortName">i_data_rf[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_data_rf[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS/tb_CPU/design_1_i/CPU_0/inst/U3_RF/rs_o" type="array">
+      <obj_property name="ElementShortName">rs_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs_o[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS/tb_CPU/design_1_i/CPU_0/inst/U3_RF/rt_o" type="array">
+      <obj_property name="ElementShortName">rt_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rt_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS/tb_CPU/design_1_i/CPU_0/addr_DM" type="array">
+      <obj_property name="ElementShortName">addr_DM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_DM[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS/tb_CPU/design_1_i/CPU_0/data_to_DM" type="array">
+      <obj_property name="ElementShortName">data_to_DM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_to_DM[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS/tb_CPU/design_1_i/CPU_0/data_from_DM" type="array">
+      <obj_property name="ElementShortName">data_from_DM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_from_DM[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS/tb_CPU/design_1_i/CPU_0/pc_out" type="array">
+      <obj_property name="ElementShortName">pc_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_out[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS/tb_CPU/design_1_i/CPU_0/data_reg_counter" type="array">
+      <obj_property name="ElementShortName">data_reg_counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_reg_counter[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS/tb_CPU/design_1_i/counter_timer_0/inst/counter" type="array">
+      <obj_property name="ElementShortName">counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[31:0]</obj_property>
+   </wvobject>
+</wave_config>

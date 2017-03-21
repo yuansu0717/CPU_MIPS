@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Mar 21 15:56:41 2017
+# Process ID: 8488
+# Current directory: D:/ZedBorad/zedboard_programmes/CPU_IP
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11764 D:\ZedBorad\zedboard_programmes\CPU_IP\CPU_IP.xpr
+# Log file: D:/ZedBorad/zedboard_programmes/CPU_IP/vivado.log
+# Journal file: D:/ZedBorad/zedboard_programmes/CPU_IP\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ZedBorad/zedboard_programmes/CPU_IP/CPU_IP.xpr
+update_compile_order -fileset sources_1
+open_bd_design {D:/ZedBorad/zedboard_programmes/CPU_IP/CPU_IP.srcs/sources_1/bd/design_1/design_1.bd}

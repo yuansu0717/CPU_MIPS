@@ -1,0 +1,14 @@
+./ALU.v
+./ALU_control.v
+./control_unit.v
+//./DM.v
+//./IM.v
+./regfile.v
+./counter_timer.v
+./CPU_without_Mem.v
+//./CPU_wrapper.v
+//./TB_MIPS.v
+./TB_CPU_nomem.v
+//./counter_timer.v
+//./uart.v
+//./gpio.v

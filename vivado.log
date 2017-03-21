@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Mar 21 16:00:16 2017
+# Process ID: 10080
+# Current directory: D:/ZedBorad/zedboard_programmes/CPU_IP
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11400 D:\ZedBorad\zedboard_programmes\CPU_IP\CPU_IP.xpr
+# Log file: D:/ZedBorad/zedboard_programmes/CPU_IP/vivado.log
+# Journal file: D:/ZedBorad/zedboard_programmes/CPU_IP\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ZedBorad/zedboard_programmes/CPU_IP/CPU_IP.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/ZedBorad/zedboard_programmes/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/EDAtools/Vivado/Vivado/2016.2/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 825.453 ; gain = 128.160
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 21 16:15:23 2017...

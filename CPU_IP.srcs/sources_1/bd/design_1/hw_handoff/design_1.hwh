@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Jan 14 17:30:48 2017" VIVADOVERSION="2016.2">
+
+  <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.3" DEVICE="7z020" NAME="design_1" PACKAGE="clg484" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="O" NAME="full_tag_counter" SIGIS="undef" SIGNAME="counter_timer_0_full_tag_counter">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="counter_timer_0" PORT="full_tag_counter"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="zero_tag_timer" SIGIS="undef" SIGNAME="counter_timer_0_zero_tag_timer">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="counter_timer_0" PORT="zero_tag_timer"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="clk_in" SIGIS="undef" SIGNAME="External_Ports_clk_in">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="fre_div_0" PORT="clk_in"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="CPU_0" PORT="rst"/>
+        <CONNECTION INSTANCE="fre_div_0" PORT="rst"/>
+        <CONNECTION INSTANCE="counter_timer_0" PORT="rst"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE FULLNAME="/CPU_0" HWVERSION="1.0" INSTANCE="CPU_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="CPU" VLNV="xilinx.com:user:CPU:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_CPU_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="fre_div_0_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fre_div_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="instr" RIGHT="0" SIGIS="undef" SIGNAME="IM_spo">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IM" PORT="spo"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="data_from_DM" RIGHT="0" SIGIS="undef" SIGNAME="DM_spo">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DM" PORT="spo"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="pc_out" RIGHT="0" SIGIS="undef" SIGNAME="CPU_0_pc_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IM" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="read_en_DM" SIGIS="undef"/>
+        <PORT DIR="O" NAME="write_en_DM" SIGIS="undef" SIGNAME="CPU_0_write_en_DM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DM" PORT="we"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="addr_DM" RIGHT="0" SIGIS="undef" SIGNAME="CPU_0_addr_DM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DM" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="data_to_DM" RIGHT="0" SIGIS="undef" SIGNAME="CPU_0_data_to_DM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DM" PORT="d"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="control_reg" RIGHT="0" SIGIS="undef" SIGNAME="CPU_0_control_reg">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="counter_timer_0" PORT="control_reg"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="data_reg_counter" RIGHT="0" SIGIS="undef" SIGNAME="CPU_0_data_reg_counter">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="counter_timer_0" PORT="data_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/DM" HWVERSION="8.0" INSTANCE="DM" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dist_mem_gen" VLNV="xilinx.com:ip:dist_mem_gen:8.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=dist_mem_gen;v=v8_0;d=pg063-dist-mem-gen.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="zynq"/>
+        <PARAMETER NAME="C_ADDR_WIDTH" VALUE="7"/>
+        <PARAMETER NAME="C_DEFAULT_DATA" VALUE="0"/>
+        <PARAMETER NAME="C_DEPTH" VALUE="128"/>
+        <PARAMETER NAME="C_HAS_CLK" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_D" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_DPO" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_DPRA" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_I_CE" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_QDPO" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_QDPO_CE" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_QDPO_CLK" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_QDPO_RST" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_QDPO_SRST" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_QSPO" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_QSPO_CE" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_QSPO_RST" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_QSPO_SRST" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_SPO" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_WE" VALUE="1"/>
+        <PARAMETER NAME="C_MEM_INIT_FILE" VALUE="design_1_dist_mem_gen_1_0.mif"/>
+        <PARAMETER NAME="C_ELABORATION_DIR" VALUE="./"/>
+        <PARAMETER NAME="C_MEM_TYPE" VALUE="1"/>
+        <PARAMETER NAME="C_PIPELINE_STAGES" VALUE="0"/>
+        <PARAMETER NAME="C_QCE_JOINED" VALUE="0"/>
+        <PARAMETER NAME="C_QUALIFY_WE" VALUE="0"/>
+        <PARAMETER NAME="C_READ_MIF" VALUE="1"/>
+        <PARAMETER NAME="C_REG_A_D_INPUTS" VALUE="0"/>
+        <PARAMETER NAME="C_REG_DPRA_INPUT" VALUE="0"/>
+        <PARAMETER NAME="C_SYNC_ENABLE" VALUE="1"/>
+        <PARAMETER NAME="C_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_PARSER_TYPE" VALUE="1"/>
+        <PARAMETER NAME="depth" VALUE="128"/>
+        <PARAMETER NAME="data_width" VALUE="32"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_dist_mem_gen_1_0"/>
+        <PARAMETER NAME="memory_type" VALUE="single_port_ram"/>
+        <PARAMETER NAME="input_options" VALUE="non_registered"/>
+        <PARAMETER NAME="input_clock_enable" VALUE="false"/>
+        <PARAMETER NAME="qualify_we_with_i_ce" VALUE="false"/>
+        <PARAMETER NAME="dual_port_address" VALUE="non_registered"/>
+        <PARAMETER NAME="simple_dual_port_address" VALUE="non_registered"/>
+        <PARAMETER NAME="output_options" VALUE="non_registered"/>
+        <PARAMETER NAME="Pipeline_Stages" VALUE="0"/>
+        <PARAMETER NAME="common_output_clk" VALUE="false"/>
+        <PARAMETER NAME="single_port_output_clock_enable" VALUE="false"/>
+        <PARAMETER NAME="common_output_ce" VALUE="false"/>
+        <PARAMETER NAME="dual_port_output_clock_enable" VALUE="false"/>
+        <PARAMETER NAME="simple_dual_port_output_clock_enable" VALUE="false"/>
+        <PARAMETER NAME="coefficient_file" VALUE="../../../../imports/MIPS_FPGA/DM.coe"/>
+        <PARAMETER NAME="default_data_radix" VALUE="16"/>
+        <PARAMETER NAME="default_data" VALUE="0"/>
+        <PARAMETER NAME="reset_qspo" VALUE="false"/>
+        <PARAMETER NAME="reset_qdpo" VALUE="false"/>
+        <PARAMETER NAME="reset_qsdpo" VALUE="false"/>
+        <PARAMETER NAME="sync_reset_qspo" VALUE="false"/>
+        <PARAMETER NAME="sync_reset_qdpo" VALUE="false"/>
+        <PARAMETER NAME="sync_reset_qsdpo" VALUE="false"/>
+        <PARAMETER NAME="ce_overrides" VALUE="ce_overrides_sync_controls"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="6" NAME="a" RIGHT="0" SIGIS="undef" SIGNAME="CPU_0_addr_DM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="addr_DM"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="d" RIGHT="0" SIGIS="undef" SIGNAME="CPU_0_data_to_DM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="data_to_DM"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="fre_div_0_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fre_div_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="we" SIGIS="undef" SIGNAME="CPU_0_write_en_DM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="write_en_DM"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="spo" RIGHT="0" SIGIS="undef" SIGNAME="DM_spo">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="data_from_DM"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/IM" HWVERSION="8.0" INSTANCE="IM" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dist_mem_gen" VLNV="xilinx.com:ip:dist_mem_gen:8.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=dist_mem_gen;v=v8_0;d=pg063-dist-mem-gen.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="zynq"/>
+        <PARAMETER NAME="C_ADDR_WIDTH" VALUE="7"/>
+        <PARAMETER NAME="C_DEFAULT_DATA" VALUE="0"/>
+        <PARAMETER NAME="C_DEPTH" VALUE="128"/>
+        <PARAMETER NAME="C_HAS_CLK" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_D" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_DPO" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_DPRA" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_I_CE" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_QDPO" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_QDPO_CE" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_QDPO_CLK" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_QDPO_RST" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_QDPO_SRST" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_QSPO" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_QSPO_CE" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_QSPO_RST" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_QSPO_SRST" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_SPO" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_WE" VALUE="0"/>
+        <PARAMETER NAME="C_MEM_INIT_FILE" VALUE="design_1_dist_mem_gen_0_1.mif"/>
+        <PARAMETER NAME="C_ELABORATION_DIR" VALUE="./"/>
+        <PARAMETER NAME="C_MEM_TYPE" VALUE="0"/>
+        <PARAMETER NAME="C_PIPELINE_STAGES" VALUE="0"/>
+        <PARAMETER NAME="C_QCE_JOINED" VALUE="0"/>
+        <PARAMETER NAME="C_QUALIFY_WE" VALUE="0"/>
+        <PARAMETER NAME="C_READ_MIF" VALUE="1"/>
+        <PARAMETER NAME="C_REG_A_D_INPUTS" VALUE="0"/>
+        <PARAMETER NAME="C_REG_DPRA_INPUT" VALUE="0"/>
+        <PARAMETER NAME="C_SYNC_ENABLE" VALUE="1"/>
+        <PARAMETER NAME="C_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_PARSER_TYPE" VALUE="1"/>
+        <PARAMETER NAME="depth" VALUE="128"/>
+        <PARAMETER NAME="data_width" VALUE="32"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_dist_mem_gen_0_1"/>
+        <PARAMETER NAME="memory_type" VALUE="rom"/>
+        <PARAMETER NAME="input_options" VALUE="non_registered"/>
+        <PARAMETER NAME="input_clock_enable" VALUE="false"/>
+        <PARAMETER NAME="qualify_we_with_i_ce" VALUE="false"/>
+        <PARAMETER NAME="dual_port_address" VALUE="non_registered"/>
+        <PARAMETER NAME="simple_dual_port_address" VALUE="non_registered"/>
+        <PARAMETER NAME="output_options" VALUE="non_registered"/>
+        <PARAMETER NAME="Pipeline_Stages" VALUE="0"/>
+        <PARAMETER NAME="common_output_clk" VALUE="false"/>
+        <PARAMETER NAME="single_port_output_clock_enable" VALUE="false"/>
+        <PARAMETER NAME="common_output_ce" VALUE="false"/>
+        <PARAMETER NAME="dual_port_output_clock_enable" VALUE="false"/>
+        <PARAMETER NAME="simple_dual_port_output_clock_enable" VALUE="false"/>
+        <PARAMETER NAME="coefficient_file" VALUE="../../../../imports/MIPS_FPGA/IM.coe"/>
+        <PARAMETER NAME="default_data_radix" VALUE="16"/>
+        <PARAMETER NAME="default_data" VALUE="0"/>
+        <PARAMETER NAME="reset_qspo" VALUE="false"/>
+        <PARAMETER NAME="reset_qdpo" VALUE="false"/>
+        <PARAMETER NAME="reset_qsdpo" VALUE="false"/>
+        <PARAMETER NAME="sync_reset_qspo" VALUE="false"/>
+        <PARAMETER NAME="sync_reset_qdpo" VALUE="false"/>
+        <PARAMETER NAME="sync_reset_qsdpo" VALUE="false"/>
+        <PARAMETER NAME="ce_overrides" VALUE="ce_overrides_sync_controls"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="6" NAME="a" RIGHT="0" SIGIS="undef" SIGNAME="CPU_0_pc_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="pc_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="spo" RIGHT="0" SIGIS="undef" SIGNAME="IM_spo">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="instr"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/counter_timer_0" HWVERSION="1.0" INSTANCE="counter_timer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="counter_timer" VLNV="xilinx.com:module_ref:counter_timer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_counter_timer_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="fre_div_0_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fre_div_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="control_reg" RIGHT="0" SIGIS="undef" SIGNAME="CPU_0_control_reg">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="control_reg"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="CPU_0_data_reg_counter">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="data_reg_counter"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="full_tag_counter" SIGIS="undef" SIGNAME="counter_timer_0_full_tag_counter">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="full_tag_counter"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="zero_tag_timer" SIGIS="undef" SIGNAME="counter_timer_0_zero_tag_timer">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="zero_tag_timer"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/fre_div_0" HWVERSION="1.0" INSTANCE="fre_div_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="fre_div" VLNV="xilinx.com:module_ref:fre_div:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="width" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_fre_div_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk_in" SIGIS="undef" SIGNAME="External_Ports_clk_in">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk" SIGIS="clk" SIGNAME="fre_div_0_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DM" PORT="clk"/>
+            <CONNECTION INSTANCE="CPU_0" PORT="clk"/>
+            <CONNECTION INSTANCE="counter_timer_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

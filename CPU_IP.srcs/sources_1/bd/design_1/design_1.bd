@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:isValidated="true" bd:synthFlowMode="None" bd:tool_version="2016.2" bd:top="design_1" bd:version="1.00.a">
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>design_1</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:parameters>
+      <spirit:parameter>
+        <spirit:name>isTop</spirit:name>
+        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
+      </spirit:parameter>
+    </spirit:parameters>
+    <spirit:busInterfaces>
+      <spirit:busInterface>
+        <spirit:name>RST.RST</spirit:name>
+        <spirit:displayName>Reset</spirit:displayName>
+        <spirit:description>Reset</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>RST</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>rst</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>POLARITY</spirit:name>
+            <spirit:value>ACTIVE_LOW</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+    </spirit:busInterfaces>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="design_1_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+      <spirit:ports>
+        <spirit:port>
+          <spirit:name>full_tag_counter</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>zero_tag_timer</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>clk_in</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>rst</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+      </spirit:ports>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>design_1_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>CPU_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="CPU" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_CPU_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>IM</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="dist_mem_gen" spirit:vendor="xilinx.com" spirit:version="8.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_dist_mem_gen_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="depth">128</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="data_width">32</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="memory_type">rom</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="coefficient_file">../../../../imports/MIPS_FPGA/IM.coe</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>DM</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="dist_mem_gen" spirit:vendor="xilinx.com" spirit:version="8.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_dist_mem_gen_1_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="depth">128</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="data_width">32</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="coefficient_file">../../../../imports/MIPS_FPGA/DM.coe</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>fre_div_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="fre_div" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_fre_div_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">fre_div</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>counter_timer_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="counter_timer" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_counter_timer_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">counter_timer</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>dist_mem_gen_0_spo</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="IM" spirit:portRef="spo"/>
+        <spirit:internalPortReference spirit:componentRef="CPU_0" spirit:portRef="instr"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>CPU_0_pc_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="CPU_0" spirit:portRef="pc_out"/>
+        <spirit:internalPortReference spirit:componentRef="IM" spirit:portRef="a"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>CPU_0_addr_DM</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="CPU_0" spirit:portRef="addr_DM"/>
+        <spirit:internalPortReference spirit:componentRef="DM" spirit:portRef="a"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>CPU_0_data_to_DM</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="CPU_0" spirit:portRef="data_to_DM"/>
+        <spirit:internalPortReference spirit:componentRef="DM" spirit:portRef="d"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>CPU_0_write_en_DM</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="CPU_0" spirit:portRef="write_en_DM"/>
+        <spirit:internalPortReference spirit:componentRef="DM" spirit:portRef="we"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dist_mem_gen_1_spo</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="DM" spirit:portRef="spo"/>
+        <spirit:internalPortReference spirit:componentRef="CPU_0" spirit:portRef="data_from_DM"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>CPU_0_control_reg</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="CPU_0" spirit:portRef="control_reg"/>
+        <spirit:internalPortReference spirit:componentRef="counter_timer_0" spirit:portRef="control_reg"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>CPU_0_data_reg_counter</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="CPU_0" spirit:portRef="data_reg_counter"/>
+        <spirit:internalPortReference spirit:componentRef="counter_timer_0" spirit:portRef="data_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>counter_timer_0_full_tag_counter</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="counter_timer_0" spirit:portRef="full_tag_counter"/>
+        <spirit:externalPortReference spirit:portRef="full_tag_counter"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>counter_timer_0_zero_tag_timer</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="counter_timer_0" spirit:portRef="zero_tag_timer"/>
+        <spirit:externalPortReference spirit:portRef="zero_tag_timer"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clk_in_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="clk_in"/>
+        <spirit:internalPortReference spirit:componentRef="fre_div_0" spirit:portRef="clk_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rst_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="rst"/>
+        <spirit:internalPortReference spirit:componentRef="CPU_0" spirit:portRef="rst"/>
+        <spirit:internalPortReference spirit:componentRef="fre_div_0" spirit:portRef="rst"/>
+        <spirit:internalPortReference spirit:componentRef="counter_timer_0" spirit:portRef="rst"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fre_div_0_clk</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fre_div_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="DM" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="CPU_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="counter_timer_0" spirit:portRef="clk"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
+  </spirit:design>
+
+</bd:repository>
